@@ -11,7 +11,7 @@ As a Data Analyst, I addressed the following key business questions:
 3.Channel Comparison: Analyze differences in Average Order Value (AOV) between channels.  
 4.Seasonality: Identify purchase distribution and trends by month.  
 
-🛠 Skills & Tools Demonstrated
+🛠 Skills & Tools Demonstrated  
 1.Advanced SQL (DQL): Writing complex queries to extract business insights.  
 2.Data Transformation: Converting data types and formatting dates for monthly analysis.  
 3.Aggregations & Grouping: Calculating totals, averages, and counts using GROUP BY and HAVING.  
