@@ -29,8 +29,9 @@ The results of this analysis prepare the company for:
 ---
 
 ## 🔍 Detailed Analysis & Results
+<details>
+  <summary><b>Task 1: Identify top-spending customers</b></summary>
 
-### Task 1: Identify top-spending customers
 **Business Question:** Which customers have contributed the most to the total revenue?
 
 **SQL Query:**
@@ -55,3 +56,4 @@ LIMIT 10;
 ```
 
 ![Result for Task 1](screenshots/Задание%201.png)
+</details>
