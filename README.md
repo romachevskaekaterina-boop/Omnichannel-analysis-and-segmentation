@@ -30,7 +30,7 @@ The results of this analysis prepare the company for:
 
 ## 🔍 Detailed Analysis & Results
 <details>
-  <summary><b>Task 1. Analysis of search results</b></summary>
+  <summary><b>Task 1. Customer Spending Analysis</b></summary>
 
 **SQL Query:**
 ```sql
@@ -64,7 +64,7 @@ order by total_spend Desc;
 </details>
 
 <details>
-  <summary><b>Task 2. Combining data from different channels (purchase id, order date, order id)</b></summary>
+  <summary><b>Task 2. Combining data from different channels (user id, order date, order id)</b></summary>
 
 **SQL Query:**
 ```sql
@@ -81,7 +81,7 @@ from store_orders;
 </details>
 
 <details>
-  <summary><b>Task 3. Search for products that were purchased both online and offline</b></summary>
+  <summary><b>Task 3. Cross-Channel product sales</b></summary>
 
 **SQL Query:**
 ```sql
@@ -97,7 +97,7 @@ order by product_id;
 </details>
 
 <details>
-  <summary><b>Task 4. Number of active buyers who bought both online and offline, >2 units of leather goods</b></summary>
+  <summary><b>Task 4.Identifying active customers buying via both channels (Online & Offline) with >2 units per product.</b></summary>
 
 **SQL Query:**
 ```sql
@@ -150,7 +150,7 @@ FROM (
 </details>
 
 <details>
-  <summary><b>Task 6. Shopping statistics by channel</b></summary>
+  <summary><b>Task 6. Purchase distribution by channel</b></summary>
 
 **SQL Query:**
 ```sql
@@ -178,7 +178,7 @@ order by channel;
 </details>
 
 <details>
-  <summary><b>Task 7. Determining the most popular products</b></summary>
+  <summary><b>Task 7. Identifying top-selling products.</b></summary>
 
 **SQL Query:**
 ```sql
@@ -208,7 +208,7 @@ limit 3;
 </details>
 
 <details>
-  <summary><b>Task 8. Comparison of average checks</b></summary>
+  <summary><b>Task 8. Average order value (AOV) comparison.</b></summary>
 
 **SQL Query:**
 ```sql
@@ -242,7 +242,7 @@ from
 </details>
 
 <details>
-  <summary><b>Task 9.Search for customers who have at least once purchased an online product that is more expensive than the average price of products purchased offline</b></summary>
+  <summary><b>Task 9. Customers with online purchases exceeding the average offline item price.</b></summary>
 
 **SQL Query:**
 ```sql
@@ -263,7 +263,7 @@ join products_sql_project p on s.product_id =p.product_id)
 </details>
 
 <details>
-  <summary><b>Task 10.Analysis of large amounts of orders by month</b></summary>
+  <summary><b>Task 10.Monthly analysis of high-value orders. </b></summary>
 
 **SQL Query:**
 ```sql
@@ -300,5 +300,5 @@ group by month
 order by month
 ```
 
-![Result for Task 10](screenshots/Задание%210.png)
+![Result for Task 10](screenshots/Задание%2010.png)
 </details>
