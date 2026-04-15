@@ -30,30 +30,52 @@ The results of this analysis prepare the company for:
 
 ## 🔍 Detailed Analysis & Results
 <details>
-  <summary><b>Task 1: Identify top-spending customers</b></summary>
-
-**Business Question:** Which customers have contributed the most to the total revenue?
+  <summary><b>Task 1. Analysis of search results</b></summary>
 
 **SQL Query:**
 ```sql
-WITH total_orders AS (
-    SELECT user_id, o.order_id, p.product_price * oi.quantity AS Total_sum
-    FROM order_items_sql_project oi
-    JOIN orders_sql_project o ON oi.order_id = o.order_id
-    JOIN products_sql_project p ON oi.product_id = p.product_id
+with total_orders as(
+select user_id,
+       o.order_id,
+       p.product_id,
+       p.product_price,
+       oi.quantity,
+       p.product_price*oi.quantity as Total_sum
+from order_items_sql_project oi
+join orders_sql_project o 
+    on oi.order_id=o.order_id 
+join products_sql_project p 
+    on oi.product_id=p.product_id
 ),
-paid_orders AS (
-    SELECT *
-    FROM total_orders t
-    JOIN payments_sql_project pay ON t.order_id = pay.order_id
-    WHERE pay.payment_status = 'Оплачено'
+paid_orders as (
+select *
+from total_orders t 
+join payments_sql_project pay
+on t.order_id=pay.order_id 
+where pay.payment_status = 'Оплачено'
 )
-SELECT user_id, SUM(total_sum) AS total_spend
-FROM paid_orders
-GROUP BY user_id
-ORDER BY total_spend DESC
-LIMIT 10;
+select user_id, sum (total_sum) as total_spend
+from paid_orders 
+group by user_id
+order by total_spend Desc;
 ```
 
 ![Result for Task 1](screenshots/Задание%201.png)
+</details>
+
+<details>
+  <summary><b>Task 2. Combining data from different channels (purchase id, order date, order id)</b></summary>
+
+**SQL Query:**
+```sql
+select user_id,
+       order_date,
+       order_id
+from orders_sql_project
+union all 
+select user_id , order_date, store_order_id 
+from store_orders;
+```
+
+![Result for Task 2](screenshots/Задание%202.png)
 </details>
