@@ -7,21 +7,21 @@ This project focuses on analyzing sales data for a retail company that operates 
 🎯 Business Goals
 As a Data Analyst, I addressed the following key business questions:
 
-Customer Value: Identify top-spending customers.
-Product Performance: Determine popular products sold across both online and offline channels.
-Channel Comparison: Analyze differences in Average Order Value (AOV) between channels.
-Seasonality: Identify purchase distribution and trends by month.
+1.Customer Value: Identify top-spending customers.
+2.Product Performance: Determine popular products sold across both online and offline channels.
+3.Channel Comparison: Analyze differences in Average Order Value (AOV) between channels.
+4.Seasonality: Identify purchase distribution and trends by month.
 
 🛠 Skills & Tools Demonstrated
-Advanced SQL (DQL): Writing complex queries to extract business insights.
-Data Transformation: Converting data types and formatting dates for monthly analysis.
-Aggregations & Grouping: Calculating totals, averages, and counts using GROUP BY and HAVING.
-Table Joins: Merging data from multiple sources to enable omnichannel analysis.
-Handling Missing Data: Processing null values for accurate reporting.
+1.Advanced SQL (DQL): Writing complex queries to extract business insights.
+2.Data Transformation: Converting data types and formatting dates for monthly analysis.
+3.Aggregations & Grouping: Calculating totals, averages, and counts using GROUP BY and HAVING.
+4.Table Joins: Merging data from multiple sources to enable omnichannel analysis.
+5.Handling Missing Data: Processing null values for accurate reporting.
 
 📈 Impact for the Business
 The results of this analysis prepare the company for:
 
-Strategic Planning: Optimizing inventory based on channel-specific demand.
-Customer Segmentation: Personalizing marketing offers for the most active buyers.
-Omnichannel Optimization: Understanding how digital and physical sales complement each other.
+1.Strategic Planning: Optimizing inventory based on channel-specific demand.
+2.Customer Segmentation: Personalizing marketing offers for the most active buyers.
+3.Omnichannel Optimization: Understanding how digital and physical sales complement each other.
