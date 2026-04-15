@@ -37,8 +37,8 @@ select user_id , order_date, store_order_id
 from store_orders;
 
 
---Завдання 3. Пошук товарів в обох каналах--
---Вибери id тільки тих товарів, які купували як онлайн, так і офлайн--
+--Завдання 3. Пошук товарів, які купували як онлайн, так і офлайн--
+
 select product_id
 from order_items_sql_project
 intersect 
@@ -46,8 +46,8 @@ select product_id
 from store_order_items
 order by product_id;
 
---Завдання 4. Визначення активних покупців--
---Вибери id тільки тих покупців, які купували як онлайн, так і офлайн, >2 одиниць кожного товару--
+--Завдання 4. Визначення активних покупців, які купували як онлайн, так і офлайн, >2 одиниць кожного товару--
+
 with online as (
 select o.order_id,
        o.user_id,
@@ -128,7 +128,7 @@ count (distinct user_id) as users_count, product_id
 from all_orders 
 group by product_id 
 order by users_count  desc
-limit 3
+limit 3;
 
 
 --Завдання 8. Порівняння середніх чеків--
@@ -159,8 +159,7 @@ from
     order by avg_check;
 
 
---Завдання 9. Пошук клієнтів з дорогими онлайн-покупками--
---Знайди клієнтів, які хоч раз купили онлайн товар дорожчий за середню ціну товарів, придбаних офлайн--
+--Завдання 9. Пошук клієнтів,які хоч раз купили онлайн товар дорожчий за середню ціну товарів, придбаних офлайн--
  with avg_price_offline as (select
  AVG(p.product_price) as avg_price
 from store_order_items s
